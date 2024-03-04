@@ -18,7 +18,7 @@ body {
   padding: 20px;
   text-align: center;
   color: white;
-  position: fixed;
+  position: flex;
   top: 0;
   left: 0;
   width: 100%;
@@ -39,7 +39,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -53,6 +53,7 @@ body {
 
 .menu-list {
   display: flex;
+  background-color: rgb(12, 12, 12);
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
@@ -74,60 +75,3 @@ body {
   transform: scale(1.05);
 }
 
-.foto-local {
-  margin-bottom: 20px;
-}
-
-.foto-local img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.footer {
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;  /* Asegura que el footer esté sobre el contenido */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.fotobar-container {
-  max-width: 25%;
-  position: fixed;
-  top: 0;
-  right: 0;
-}
-
-.fotobar {
-  max-width: 25%;
-  height: auto;
-}
-
-/* Estilos para la información de contacto y dirección */
-.contacto,
-.direccion {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-}
-
-.contacto h2,
-.direccion h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.contacto p,
-.direccion p {
-  color: #ddd;
-}

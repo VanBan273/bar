@@ -17,8 +17,8 @@ const Direccion = () => (
   </div>
 );
 
-const Footer = () => (
-  <footer className="footer">
+const Footer = ({ visible }) => (
+  <footer className={`footer ${visible ? "visible" : ""}`}>
     <Contacto />
     <Direccion />
     <img className="fotobar" src="/fotobar.jpg" alt="Foto del local" />
@@ -56,7 +56,7 @@ function App() {
         <FotoLocal />
         <Menu />
       </main>
-      {showFooter && <Footer />}
+      <Footer visible={showFooter} />
     </div>
   );
 }
