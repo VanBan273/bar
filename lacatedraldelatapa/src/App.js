@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from "react";
 import Menu from "./Menu";
 import "./App.css";
+import { CustomMap } from "./CustomMap";
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import { Marker } from "@react-google-maps/api";
 
 const Contacto = () => (
   <div className="contacto">
@@ -21,6 +24,17 @@ const Footer = ({ visible }) => (
   <footer className={`footer ${visible ? "visible" : ""}`}>
     <Contacto />
     <Direccion />
+    <div className="map-container">
+      <LoadScript googleMapsApiKey="TU_API_KEY">
+        <GoogleMap
+          mapContainerStyle={{ width: "100%", height: "200px" }}
+          zoom={15}
+          center={{ lat: 37.3828, lng: -5.9825 }}
+        >
+          <Marker position={{ lat: 37.3828, lng: -5.9825 }} />
+        </GoogleMap>
+      </LoadScript>
+    </div>
   </footer>
 );
 
