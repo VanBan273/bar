@@ -21,7 +21,6 @@ const Footer = ({ visible }) => (
   <footer className={`footer ${visible ? "visible" : ""}`}>
     <Contacto />
     <Direccion />
-    <img className="fotobar" src="/fotobar.jpg" alt="Foto del local" />
   </footer>
 );
 
@@ -48,11 +47,11 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="container">
       <header className="header">
         <Logo />
       </header>
-      <main>
+      <main className="main-content">
         <FotoLocal />
         <Menu />
       </main>
