@@ -5,6 +5,7 @@ import "./App.css";
 import { CustomMap } from "./CustomMap";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { Marker } from "@react-google-maps/api";
+import "./App.css";
 
 const Contacto = () => (
   <div className="contacto">

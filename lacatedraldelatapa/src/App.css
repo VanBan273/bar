@@ -33,7 +33,9 @@ body {
 }
 
 .main-content {
-  margin-top: 80px;
+  margin-top: 0px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 .logo-container {
@@ -58,24 +60,26 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
+  padding: 30px;
   margin: 20px;
   list-style: none;
   border: 25px solid #000000; 
   box-sizing: border-box; 
   
+
 }
 
 .menu-item {
   width: calc(25% - 20px);
   box-sizing: border-box;
   margin: 10px;
-  padding: 15px;
+  padding: 5px;
   background-color: #ffffff;
   transition: transform 0.3s ease-in-out;
-  border: 5px solid #000000; /* Bordes negros */
+  border: 8px solid #000000; /* Bordes negros */
+ 
+  
 }
-
 
 .menu-item:hover {
   transform: scale(1.05);
@@ -176,3 +180,45 @@ body {
   margin-top: 10px;
 }
 
+.menu-item img {
+  width: 100%;
+  height: 50%;
+  padding-bottom: 100px;
+  padding-top: 20px;
+  object-fit: cover; /* Hace que la imagen cubra el cuadro sin distorsionarla */
+  object-position: center top; /* Ajusta la posición de la imagen dentro del cuadro */
+}
+
+/* App.css u otro archivo de estilos */
+.menu-item {
+  /* Estilos generales de la tarjeta del menú */
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  /* Ajusta otros estilos según tus necesidades */
+
+  /* Nuevos estilos para el precio */
+  .price {
+    font-weight: bold;
+    color: #007bff; /* Puedes ajustar el color según tu preferencia */
+  }
+
+  /* Nuevos estilos para la descripción */
+  .description {
+    font-size: 14px; /* Puedes ajustar el tamaño de la fuente según tu preferencia */
+  }
+}
+
+
+.menu-item h3 {
+  font-size: 30px; 
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.menu-item p {
+  font-size: 20px; 
+  margin: 8px 0; 
+  
+
+}
