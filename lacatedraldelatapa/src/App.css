@@ -1,32 +1,25 @@
-/* src/App.css */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f8f8f8;
   text-align: center;
- 
-  
 }
-
-
 
 .container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  overflow-x: hidden;
 }
 
-.header {
+.header,
+.logo-container {
   background-color: #ffffff;
-  border: 25px solid #000000; 
-  box-sizing: border-box; /* Incluye el borde en el ancho y alto del elemento */
+  border: 25px solid #000000;
+  box-sizing: border-box;
   padding: 20px;
   text-align: center;
-  position: flex;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 2;
   display: flex;
@@ -34,27 +27,8 @@ body {
   align-items: center;
 }
 
-.main-content {
-  margin-top: 0px;
-  margin-left: -10px;
-  margin-right: -10px;
-}
-
-.logo-container {
-  background-color: #ffffff;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-}
-
 .logo {
-  max-width: 100%;
+  max-width: 100%; /* Ajustado el tamaño máximo */
   height: auto;
 }
 
@@ -62,35 +36,36 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 30px;
-  margin: 20px;
+  padding: 15px; /* Ajustado el padding */
   list-style: none;
-  border: 25px solid #000000; 
-  box-sizing: border-box; 
-  
-
+  border: 20px solid #000000; /* Ajustado el border */
+  box-sizing: border-box;
 }
 
 .menu-item {
   width: calc(25% - 20px);
   box-sizing: border-box;
   margin: 10px;
-  padding: 5px;
+  padding: 10px; /* Ajustado el padding */
   background-color: #f3f0f0;
   transition: transform 0.3s ease-in-out;
-  border: 8px solid #000000; /* Bordes negros */
-  
+  border: 8px solid #000000;
+  box-sizing: border-box;
 }
 
 .menu-item:hover {
   transform: scale(1.05);
 }
 
-
+@media (max-width: 1024px) {
+  .menu-item {
+    width: calc(33.33% - 20px); /* Cambiado a 3 columnas en tablets */
+  }
+}
 
 @media (max-width: 768px) {
   .menu-item {
-    width: calc(50% - 20px);
+    width: calc(50% - 20px); /* 2 columnas en dispositivos más pequeños */
   }
 }
 
@@ -121,20 +96,6 @@ body {
   opacity: 1;
 }
 
-/* Media queries para hacer responsive */
-@media (max-width: 768px) {
-  .menu-item {
-    width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .menu-item {
-    width: 100%;
-  }
-}
-
-/* src/components/Modal.css */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -146,107 +107,44 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.map-container {
-  width: 100%;
-  height: 200px;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-top: 25px; /* Ajusta el margen superior según sea necesario */
-}
-
-.map-overlay {
-  position: absolute;
-  top: 0;
-  right: 25px; /* Ajusta el espacio a la derecha según sea necesario */
-  width: 200px; /* Ajusta el ancho según sea necesario */
-  height: 100%;
-}
-
-/* src/Modal.css */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
 
 .menu-item img {
   width: 100%;
-  height: 50%;
-  padding-bottom: 100px;
-  padding-top: 20px;
-  object-fit: cover; /* Hace que la imagen cubra el cuadro sin distorsionarla */
-  object-position: center top; /* Ajusta la posición de la imagen dentro del cuadro */
+  height: auto;
+  object-fit: cover;
+  object-position: center top;
 }
 
-/* App.css u otro archivo de estilos */
 .menu-item {
-  /* Estilos generales de la tarjeta del menú */
   border: 5px solid #000000;
   padding: 10px;
   margin: 10px;
-  
-
-
-  /* Nuevos estilos para la descripción */
-  .description {
-    font-size: 14px; /* Puedes ajustar el tamaño de la fuente según tu preferencia */
-  }
 }
 
 .menu-item h3 {
-  font-size: 30px; 
-  margin-top: 5px;
-  margin-bottom: 5px;
+  font-size: 24px; /* Ajustado el tamaño */
+  margin: 5px;
 }
 
 .menu-item p {
-  font-size: 30px; 
-  margin: 8px 0; 
-  margin-top: -5px;
-  
-
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  
+  font-size: 18px; /* Ajustado el tamaño */
+  margin: 3px 0;
 }
 
 .modal-content {
-  width: 80%; /* Ancho del 80% del contenedor padre */
-  height: 80%; /* Altura del 80% del contenedor padre */
-  max-width: 750px; /* Ancho máximo del contenedor */
-  max-height: 600px; /* Altura máxima del contenedor */
-  overflow: auto; /* Agrega desplazamiento si el contenido es demasiado grande */
-  background-color: white; /* Fondo blanco o el color que prefieras */
-  border-radius: 30px; /* Bordes redondeados para un aspecto más suave */
-  padding: 100px; /* Espaciado interno para el contenido */
-  position: relative; 
-  font-size: 24px;
+  width: 80%;
+  height: 80%;
+  max-width: 750px;
+  max-height: 600px;
+  overflow: auto;
+  background-color: white;
+  border-radius: 30px;
+  padding: 30px; /* Ajustado el padding */
+  position: relative;
+  font-size: 18px; /* Ajustado el tamaño */
 }
 
 .close-button {
-  /* Estilos para el botón de cierre */
   position: absolute;
   top: 10px;
   right: 10px;
@@ -254,25 +152,23 @@ body {
   background-color: transparent;
   border: none;
   font-size: 20px;
-  color: #333; /* Color del texto */
+  color: #333;
 }
 
-
 .modal-content h3 {
-  font-size: 24px; /* Tamaño del nombre del plato */
-  margin-top: -50px;
+  font-size: 27px;
+  margin-top: -25px; /* Ajustado el margen superior */
 }
 
 .modal-content p {
-  font-size: 28px; /* Tamaño del texto de la descripción */
-  margin-bottom: -20px;
+  font-size: 18px;
+  margin-bottom: -10px; /* Ajustado el margen inferior */
+
 }
 
 .modal-content img {
-  width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
-  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
-  max-width: 100%; /* El ancho máximo de la imagen será el 100% del contenedor */
-  max-height: 100%; /* La altura máxima de la imagen será el 100% del contenedor */
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
-
-
