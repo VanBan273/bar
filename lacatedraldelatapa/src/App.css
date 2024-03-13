@@ -163,22 +163,7 @@ body {
   align-items: center;
 }
 
-.modal-content {
-  background-color: white;
-  border-radius: 5px;
-  padding: 20px;
-  max-width: 400px;
-}
 
-.modal-image {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.modal-description {
-  margin-top: 10px;
-}
 
 .menu-item img {
   width: 100%;
@@ -222,3 +207,62 @@ body {
   
 
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.modal-content {
+  width: 80%; /* Ancho del 80% del contenedor padre */
+  height: 80%; /* Altura del 80% del contenedor padre */
+  max-width: 750px; /* Ancho máximo del contenedor */
+  max-height: 600px; /* Altura máxima del contenedor */
+  overflow: auto; /* Agrega desplazamiento si el contenido es demasiado grande */
+  background-color: white; /* Fondo blanco o el color que prefieras */
+  border-radius: 30px; /* Bordes redondeados para un aspecto más suave */
+  padding: 100px; /* Espaciado interno para el contenido */
+  position: relative; 
+  font-size: 24px;
+}
+
+.close-button {
+  /* Estilos para el botón de cierre */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #333; /* Color del texto */
+}
+
+
+.modal-content h3 {
+  font-size: 24px; /* Tamaño del nombre del plato */
+  margin-top: -50px;
+}
+
+.modal-content p {
+  font-size: 28px; /* Tamaño del texto de la descripción */
+  margin-bottom: -20px;
+}
+
+.modal-content img {
+  width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+  max-width: 100%; /* El ancho máximo de la imagen será el 100% del contenedor */
+  max-height: 100%; /* La altura máxima de la imagen será el 100% del contenedor */
+}
+
+
