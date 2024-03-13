@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import serranitoImagen from "./imagenes/serranitoImagen.jpg";
+import Modal from "./Modal";
 
 const Menu = () => {
   const [menuItems, setMenuItems] = useState([
@@ -66,18 +67,40 @@ const Menu = () => {
         "Espárragos cocidos con una salsa de tomate, ajo, ñoras y almendras.",
     },
   ]);
+
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedItem(null);
+  };
   // En el componente Menu.js
   return (
     <div className="menu-list">
       {menuItems.map((item) => (
-        <div key={item.id} className="menu-item">
-          {/* Renderiza la información del plato, como el nombre, la imagen, el precio, etc. */}
+        <div
+          key={item.id}
+          className="menu-item"
+          onClick={() => handleItemClick(item)}
+        >
           <h3>{item.name}</h3>
           <img src={item.imageUrl} alt={item.name} />
           <p>{`Precio: ${item.price} €`}</p>
           <p>{item.description}</p>
         </div>
       ))}
+
+      {selectedItem && (
+        <Modal onClose={handleCloseModal}>
+          <h3>{selectedItem.name}</h3>
+          <img src={selectedItem.imageUrl} alt={selectedItem.name} />
+          <p>{`Precio: ${selectedItem.price} €`}</p>
+          <p>{selectedItem.description}</p>
+        </Modal>
+      )}
     </div>
   );
 };
