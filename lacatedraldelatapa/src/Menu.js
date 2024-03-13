@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import serranitoImagen from "./imagenes/serranitoImagen.jpg";
 
 const Menu = () => {
   const [menuItems, setMenuItems] = useState([
@@ -50,9 +51,10 @@ const Menu = () => {
       id: 7,
       name: "Serranito",
       price: 4.5,
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: serranitoImagen,
       description: "Pollo, pimiento, tomate y tortilla",
     },
+
     // Agrega más platos según sea necesario
     // ...
     {
