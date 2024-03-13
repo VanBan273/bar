@@ -9,6 +9,8 @@ body {
   
 }
 
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -74,15 +76,28 @@ body {
   box-sizing: border-box;
   margin: 10px;
   padding: 5px;
-  background-color: #ffffff;
+  background-color: #f3f0f0;
   transition: transform 0.3s ease-in-out;
   border: 8px solid #000000; /* Bordes negros */
- 
   
 }
 
 .menu-item:hover {
   transform: scale(1.05);
+}
+
+
+
+@media (max-width: 768px) {
+  .menu-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-item {
+    width: 100%;
+  }
 }
 
 .footer {
@@ -177,23 +192,17 @@ body {
 /* App.css u otro archivo de estilos */
 .menu-item {
   /* Estilos generales de la tarjeta del menú */
-  border: 1px solid #ccc;
+  border: 5px solid #000000;
   padding: 10px;
   margin: 10px;
-  /* Ajusta otros estilos según tus necesidades */
+  
 
-  /* Nuevos estilos para el precio */
-  .price {
-    font-weight: bold;
-    color: #007bff; /* Puedes ajustar el color según tu preferencia */
-  }
 
   /* Nuevos estilos para la descripción */
   .description {
     font-size: 14px; /* Puedes ajustar el tamaño de la fuente según tu preferencia */
   }
 }
-
 
 .menu-item h3 {
   font-size: 30px; 
@@ -202,8 +211,9 @@ body {
 }
 
 .menu-item p {
-  font-size: 20px; 
+  font-size: 30px; 
   margin: 8px 0; 
+  margin-top: -5px;
   
 
 }
