@@ -1,28 +1,30 @@
 import React, { useState } from "react";
 import serranitoImagen from "./imagenes/serranitoImagen.jpg";
+import flamenquinImagen from "./imagenes/flamenquin.jpg";
+import gazpachoImagen from "./imagenes/gazpacho.jpg";
 import Modal from "./Modal";
 
 const Menu = () => {
   const [menuItems, setMenuItems] = useState([
     {
       id: 1,
-      name: "Salmorejo",
-      price: 5.99,
-      imageUrl: "https://via.placeholder.com/150",
-      description: "Crema fría de tomate, pan, aceite, ajo y sal.",
+      name: "Serranito",
+      price: 4.5,
+      imageUrl: serranitoImagen,
+      description: "Pollo, pimiento, tomate y tortilla",
     },
     {
       id: 2,
       name: "Flamenquín",
       price: 7.5,
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: flamenquinImagen,
       description: "Filete de ternera envuelto en jamón serrano y rebozado.",
     },
     {
       id: 3,
       name: "Gazpacho",
       price: 6.25,
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: gazpachoImagen,
       description:
         "Sopa fría a base de tomate, pepino, pimiento, cebolla, ajo y pan.",
     },
@@ -50,10 +52,10 @@ const Menu = () => {
 
     {
       id: 7,
-      name: "Serranito",
-      price: 4.5,
-      imageUrl: serranitoImagen,
-      description: "Pollo, pimiento, tomate y tortilla",
+      name: "Salmorejo",
+      price: 5.99,
+      imageUrl: "https://via.placeholder.com/150",
+      description: "Crema fría de tomate, pan, aceite, ajo y sal.",
     },
 
     // Agrega más platos según sea necesario
